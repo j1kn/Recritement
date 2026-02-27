@@ -142,8 +142,7 @@ export default function Hero() {
               ref={subheadlineRef}
               className="text-lg text-slate-muted max-w-xl mb-8"
             >
-              Sales and customer-facing talent—sourced, screened, and matched to
-              your revenue goals. We specialize in placing high-performing professionals who drive results.
+              At Recruit 28, we strive to earn the trust of both clients and candidates through reliability, transparency, and results.
             </p>
 
             {/* CTAs */}

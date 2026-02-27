@@ -14,6 +14,7 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
+    { label: 'About Us', href: '#about' },
     { label: 'Employers', href: '#employers' },
     { label: 'Candidates', href: '#candidates' },
     { label: 'Roles', href: '#roles' },
@@ -31,11 +32,10 @@ export default function Navigation() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
             ? 'bg-navy/90 backdrop-blur-md border-b border-white/5'
             : 'bg-transparent'
-        }`}
+          }`}
       >
         <div className="w-full px-6 lg:px-[6vw]">
           <div className="flex items-center justify-between h-16 lg:h-20">
@@ -80,9 +80,8 @@ export default function Navigation() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-navy/98 backdrop-blur-lg transition-all duration-500 lg:hidden ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}
+        className={`fixed inset-0 z-40 bg-navy/98 backdrop-blur-lg transition-all duration-500 lg:hidden ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          }`}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
           {navLinks.map((link, index) => (

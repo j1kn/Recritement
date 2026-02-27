@@ -5,6 +5,7 @@ import { Toaster } from 'sonner';
 
 import Navigation from './sections/Navigation';
 import Hero from './sections/Hero';
+import About from './sections/About';
 import TwoTile from './sections/TwoTile';
 import Statement from './sections/Statement';
 import Services from './sections/Services';
@@ -23,7 +24,7 @@ function App() {
   useEffect(() => {
     // Refresh ScrollTrigger on load
     ScrollTrigger.refresh();
-    
+
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
@@ -52,6 +53,7 @@ function App() {
       {/* Main Content */}
       <main className="relative">
         <Hero />
+        <About />
         <TwoTile />
         <Statement />
         <Services />

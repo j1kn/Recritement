@@ -74,11 +74,10 @@ export default function Statement() {
             Why Choose Recruit 28
           </span>
           <h2 className="animate-item font-display font-bold text-h2 text-slate-text mb-6">
-            A smarter way to hire sales and customer talent.
+            Why Choose Recruit 28
           </h2>
-          <p className="animate-item text-lg text-slate-muted mb-10 max-w-2xl mx-auto">
-            Briefings that stick. Shortlists that save time. Placements that
-            perform. We understand the pressure of sales targets because we've lived them.
+          <p className="animate-item text-lg text-slate-muted mb-10 max-w-3xl mx-auto">
+            At Recruit 28, we understand sales inside and out. We know what it takes to build pipeline, close deals, and consistently hit targets — and we know the type of people it takes to do it. We see the sales process from both the client and candidate perspective, which means we match skills, mindset, and culture — not just CVs to job specs. The result? Stronger hires, better performance, and long-term success for both sides.
           </p>
 
           {/* Benefits */}

@@ -1,45 +1,33 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { TrendingUp, Users, Building2, ArrowRight } from 'lucide-react';
+import { TrendingUp, Users, ArrowRight } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
     icon: TrendingUp,
-    title: 'Sales',
-    description: 'From SDRs to Sales Directors, we place revenue-driving professionals at every level.',
+    title: 'Sales Roles (All Levels)',
+    description: 'We connect ambitious businesses with driven professionals who know how to build relationships and drive revenue.',
     items: [
-      'Business Development',
-      'Account Management',
-      'Sales Leadership',
-      'SaaS Sales',
-      'Telesales',
+      'Sales Development Representatives (SDRs)',
+      'Business Development Executives (BDMs)',
+      'Account Executives',
+      'Account Managers',
+      'Sales Managers',
+      'Head of Sales / Sales Directors',
     ],
   },
   {
     icon: Users,
-    title: 'Customer & Success',
-    description: 'Build lasting customer relationships with the right support and success talent.',
+    title: 'Customer Success Roles',
+    description: 'Build lasting customer relationships and deliver long-term growth with dedicated specialists.',
     items: [
-      'Customer Service',
-      'Onboarding',
-      'Customer Success',
-      'Account Coordinators',
-    ],
-  },
-  {
-    icon: Building2,
-    title: 'Industries',
-    description: 'Deep expertise across high-growth sectors that demand top sales talent.',
-    items: [
-      'SaaS',
-      'Fintech',
-      'Insurtech',
-      'Professional Services',
-      'Retail',
-      'Logistics',
+      'Customer Success Executives',
+      'Customer Success Managers',
+      'Client Relationship Managers',
+      'Account Retention Specialists',
     ],
   },
 ];
@@ -112,13 +100,12 @@ export default function Services() {
             What we recruit for
           </h2>
           <p className="animate-item text-body text-[#3D4A5C] max-w-2xl mx-auto">
-            Sales and customer-facing roles—end to end. Permanent, contract,
-            and high-volume delivery tailored to your needs.
+            We connect ambitious businesses with driven professionals who know how to build relationships, drive revenue, and deliver long-term growth.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <div
               key={service.title}
@@ -136,7 +123,7 @@ export default function Services() {
                   <p className="text-sm text-[#3D4A5C]">{service.description}</p>
                 </div>
               </div>
-              
+
               <div className="flex flex-wrap gap-2">
                 {service.items.map((item) => (
                   <span
@@ -157,7 +144,7 @@ export default function Services() {
             href="#contact"
             className="inline-flex items-center gap-2 text-navy font-semibold hover:text-coral transition-colors duration-300"
           >
-            Discuss your hiring needs
+            Ready to find your next top performer or advance your sales career? Get in touch with Recruit 28 today!
             <ArrowRight size={18} />
           </a>
         </div>
