@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Send, Quote, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Send, Phone, Mail, MapPin } from 'lucide-react';
 import { toast } from 'sonner';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,7 +10,6 @@ const contactInfo = [
   { icon: Phone, label: 'Phone', value: '+44 (0) 20 7123 4567' },
   { icon: Mail, label: 'Email', value: 'hello@recruit28.co.uk' },
   { icon: MapPin, label: 'Location', value: 'London, UK' },
-  { icon: Clock, label: 'Response Time', value: 'Within 24 hours' },
 ];
 
 export default function Contact() {
@@ -118,30 +117,8 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
-          {/* Left Column - Testimonial & Contact Info */}
+          {/* Left Column - Contact Info */}
           <div className="space-y-6">
-            {/* Testimonial Card */}
-            <div
-              ref={testimonialRef}
-              className="card-glass rounded-card p-6 lg:p-8"
-            >
-              <Quote className="w-8 h-8 text-coral mb-4" />
-              <blockquote className="text-base text-slate-text leading-relaxed mb-6">
-                "Recruit 28 delivered a shortlist in days, not weeks. Every
-                candidate was relevant—and one became our top AE within six
-                months."
-              </blockquote>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-coral/20 flex items-center justify-center">
-                  <span className="font-display font-bold text-sm text-coral">HM</span>
-                </div>
-                <div>
-                  <p className="font-medium text-slate-text text-sm">Hiring Manager</p>
-                  <p className="text-xs text-slate-muted">B2B SaaS</p>
-                </div>
-              </div>
-            </div>
-
             {/* Contact Info */}
             <div ref={infoRef} className="card-glass rounded-card p-6">
               {contactInfo.map((item) => (

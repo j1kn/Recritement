@@ -64,12 +64,7 @@ export default function Footer() {
               >
                 For Candidates
               </button>
-              <button
-                onClick={() => scrollToSection('#roles')}
-                className="block text-sm text-slate-muted hover:text-slate-text transition-colors duration-300"
-              >
-                Roles We Cover
-              </button>
+
               <button
                 onClick={() => scrollToSection('#contact')}
                 className="block text-sm text-slate-muted hover:text-slate-text transition-colors duration-300"
@@ -88,7 +83,7 @@ export default function Footer() {
               <span className="block text-sm text-slate-muted">Sales Recruitment</span>
               <span className="block text-sm text-slate-muted">Customer Success</span>
               <span className="block text-sm text-slate-muted">Executive Search</span>
-              <span className="block text-sm text-slate-muted">Contract Hiring</span>
+
             </nav>
           </div>
 

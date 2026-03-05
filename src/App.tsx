@@ -10,7 +10,7 @@ import TwoTile from './sections/TwoTile';
 import Statement from './sections/Statement';
 import Services from './sections/Services';
 import Specialists from './sections/Specialists';
-import Process from './sections/Process';
+
 import Stats from './sections/Stats';
 import Quality from './sections/Quality';
 import Contact from './sections/Contact';
@@ -58,7 +58,7 @@ function App() {
         <Statement />
         <Services />
         <Specialists />
-        <Process />
+
         <Stats />
         <Quality />
         <Contact />

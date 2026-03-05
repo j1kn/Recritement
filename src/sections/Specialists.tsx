@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Target, Zap, Award } from 'lucide-react';
+import { Target } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,16 +10,6 @@ const differentiators = [
     icon: Target,
     title: 'Sales-First Focus',
     description: 'We only recruit for sales and customer-facing roles. That singular focus makes us better.',
-  },
-  {
-    icon: Zap,
-    title: 'Fast Delivery',
-    description: 'Our network and process mean you see qualified candidates within days, not weeks.',
-  },
-  {
-    icon: Award,
-    title: 'Quality Guaranteed',
-    description: 'We stand behind every placement with a comprehensive replacement guarantee.',
   },
 ];
 

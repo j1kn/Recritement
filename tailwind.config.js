@@ -11,9 +11,9 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         navy: {
-          DEFAULT: "#0B0F17",
-          light: "#141B26",
-          dark: "#070A10",
+          DEFAULT: "#001B3D",
+          light: "#002B5B",
+          dark: "#000F21",
         },
         coral: {
           DEFAULT: "#FF6A3D",

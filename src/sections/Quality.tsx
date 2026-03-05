@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Star, Users, Clock, Shield } from 'lucide-react';
+import { Star, Users } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,16 +15,6 @@ const values = [
     icon: Users,
     title: 'Cultural Fit',
     description: 'We match personalities and values, not just skills on paper.',
-  },
-  {
-    icon: Clock,
-    title: 'Speed Without Sacrifice',
-    description: 'Fast turnaround without cutting corners on quality.',
-  },
-  {
-    icon: Shield,
-    title: 'Replacement Guarantee',
-    description: 'Peace of mind with our comprehensive placement guarantee.',
   },
 ];
 

@@ -97,7 +97,7 @@ export default function Services() {
             What We Do
           </span>
           <h2 className="animate-item font-display font-bold text-h2 text-navy mb-4">
-            What we recruit for
+            What We Recruit For
           </h2>
           <p className="animate-item text-body text-[#3D4A5C] max-w-2xl mx-auto">
             We connect ambitious businesses with driven professionals who know how to build relationships, drive revenue, and deliver long-term growth.
