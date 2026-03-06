@@ -8,8 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 const differentiators = [
   {
     icon: Target,
-    title: 'Sales-First Focus',
-    description: 'We only recruit for sales and customer-facing roles. That singular focus makes us better.',
+    title: 'Sales Specialist',
+    description: 'Having years of experience in the sales industry enables us to understand your needs better.',
   },
 ];
 
@@ -95,12 +95,12 @@ export default function Specialists() {
         </div>
 
         {/* Differentiator Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <div className="flex justify-center max-w-5xl mx-auto">
           {differentiators.map((item, index) => (
             <div
               key={item.title}
               ref={(el) => { cardsRef.current[index] = el; }}
-              className="card-glass rounded-card p-6 lg:p-8 text-center"
+              className="card-glass rounded-card p-6 lg:p-8 text-center max-w-md"
             >
               <div className="w-14 h-14 rounded-btn bg-coral/20 flex items-center justify-center mx-auto mb-5">
                 <item.icon className="w-7 h-7 text-coral" />

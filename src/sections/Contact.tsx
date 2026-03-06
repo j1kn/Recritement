@@ -112,7 +112,7 @@ export default function Contact() {
             Ready to hire better?
           </h2>
           <p className="text-body text-slate-muted max-w-2xl mx-auto">
-            Let's discuss your hiring needs. We'll get back to you within 24 hours.
+            Let's discuss your needs. We'll get back to you within 24 hours.
           </p>
         </div>
 
@@ -219,7 +219,7 @@ export default function Contact() {
                   rows={4}
                   required
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-btn text-slate-text placeholder:text-slate-muted/50 focus:outline-none focus:border-coral/50 transition-colors resize-none"
-                  placeholder="Tell us about your hiring needs..."
+                  placeholder="Tell us about your needs."
                 />
               </div>
 

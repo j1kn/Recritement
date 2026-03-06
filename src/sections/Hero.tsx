@@ -122,7 +122,7 @@ export default function Hero() {
               ref={microLabelRef}
               className="text-micro text-coral block mb-4"
             >
-              UK Sales & Customer Recruitment
+              UK Sales Specialist Recruitment
             </span>
 
             {/* Headline */}
