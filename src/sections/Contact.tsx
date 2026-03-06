@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const contactInfo = [
   { icon: Phone, label: 'Phone', value: '+44 (0) 20 7123 4567' },
   { icon: Mail, label: 'Email', value: 'hello@recruit28.co.uk' },
-  { icon: MapPin, label: 'Location', value: 'London, UK' },
+  { icon: MapPin, label: 'Location', value: 'UK' },
 ];
 
 export default function Contact() {

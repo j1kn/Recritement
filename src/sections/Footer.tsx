@@ -109,7 +109,7 @@ export default function Footer() {
               </a>
               <div className="flex items-center gap-2 text-sm text-slate-muted">
                 <MapPin size={14} className="text-coral" />
-                London, UK
+                UK
               </div>
             </div>
           </div>
