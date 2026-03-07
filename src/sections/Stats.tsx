@@ -1,56 +1,13 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ArrowRight } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const stats = [
-  { value: 500, suffix: '+', label: 'Placements Made' },
-  { value: 14, suffix: '', label: 'Days Average to Shortlist' },
-  { value: 95, suffix: '%', label: 'Retention at 12 Months' },
-  { value: 50, suffix: '+', label: 'Client Companies' },
-];
-
-function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
-  const [displayValue, setDisplayValue] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const trigger = ScrollTrigger.create({
-      trigger: el,
-      start: 'top 80%',
-      onEnter: () => {
-        gsap.to(
-          { val: 0 },
-          {
-            val: value,
-            duration: 2,
-            ease: 'power2.out',
-            onUpdate: function () {
-              setDisplayValue(Math.round(this.targets()[0].val));
-            },
-          }
-        );
-      },
-      once: true,
-    });
-
-    return () => trigger.kill();
-  }, [value]);
-
-  return (
-    <span ref={ref}>
-      {displayValue}
-      {suffix}
-    </span>
-  );
-}
-
 export default function Stats() {
   const sectionRef = useRef<HTMLElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -58,17 +15,16 @@ export default function Stats() {
 
     const ctx = gsap.context(() => {
       gsap.fromTo(
-        section.querySelectorAll('.stat-item'),
-        { opacity: 0, y: 20 },
+        contentRef.current,
+        { opacity: 0, y: 30 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.6,
-          stagger: 0.1,
+          duration: 0.8,
           ease: 'power2.out',
           scrollTrigger: {
             trigger: section,
-            start: 'top 75%',
+            start: 'top 85%',
             toggleActions: 'play none none reverse',
           },
         }
@@ -78,24 +34,41 @@ export default function Stats() {
     return () => ctx.revert();
   }, []);
 
+  const scrollToContact = () => {
+    const element = document.querySelector('#contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 lg:py-20 bg-coral"
+      className="relative py-16 lg:py-24 bg-coral overflow-hidden"
       style={{ zIndex: 65 }}
     >
       <div className="w-full px-6 lg:px-[6vw]">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {stats.map((stat) => (
-            <div key={stat.label} className="stat-item text-center">
-              <div className="font-display font-bold text-4xl lg:text-5xl text-navy mb-2">
-                <AnimatedNumber value={stat.value} suffix={stat.suffix} />
-              </div>
-              <p className="text-sm lg:text-base text-navy/80">{stat.label}</p>
+        <div
+          ref={contentRef}
+          className="max-w-4xl mx-auto text-center"
+        >
+          <button
+            onClick={scrollToContact}
+            className="group inline-flex items-center gap-4 text-center transition-transform duration-300 hover:scale-105"
+          >
+            <span className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-navy leading-tight">
+              Book a call today
+            </span>
+            <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-navy flex items-center justify-center text-coral transition-transform duration-300 group-hover:translate-x-2">
+              <ArrowRight size={32} strokeWidth={2.5} className="w-8 h-8 lg:w-10 lg:h-10" />
             </div>
-          ))}
+          </button>
         </div>
       </div>
+
+      {/* Decorative patterns */}
+      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-64 h-64 bg-navy/5 rounded-full blur-3xl pointer-events-none" />
     </section>
   );
 }
