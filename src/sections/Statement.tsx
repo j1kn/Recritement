@@ -6,8 +6,6 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 const benefits = [
-  'Average 14 days to first shortlist',
-  '95% placement retention at 12 months',
   'Dedicated account manager',
 ];
 

@@ -90,7 +90,7 @@ export default function Specialists() {
             We're sales recruitment specialists.
           </h2>
           <p className="animate-item text-lg text-slate-muted max-w-2xl mx-auto">
-            Not generalists. Not job boards. Just focused delivery from a team that understands sales.
+            Our Expertise. Just focused delivery from a team that understands sales.
           </p>
         </div>
 

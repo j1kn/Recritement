@@ -11,7 +11,7 @@ export default function Hero() {
   const portraitRef = useRef<HTMLDivElement>(null);
   const microLabelRef = useRef<HTMLSpanElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
-  const subheadlineRef = useRef<HTMLParagraphElement>(null);
+
   const ctaRef = useRef<HTMLDivElement>(null);
 
   // Auto-play entrance animation on load
@@ -29,12 +29,6 @@ export default function Hero() {
           { opacity: 0, y: 20 },
           { opacity: 1, y: 0, duration: 0.6, stagger: 0.04 },
           '-=0.2'
-        )
-        .fromTo(
-          subheadlineRef.current,
-          { opacity: 0, y: 15 },
-          { opacity: 1, y: 0, duration: 0.5 },
-          '-=0.3'
         )
         .fromTo(
           ctaRef.current,
@@ -94,7 +88,7 @@ export default function Hero() {
     }
   };
 
-  const headlineWords = 'Hire the people who move the needle.'.split(' ');
+  const headlineWords = 'At Recruit 28, we strive to earn the trust of both clients and candidates through reliability, transparency, and results.'.split(' ');
 
   return (
     <section
@@ -137,13 +131,7 @@ export default function Hero() {
               ))}
             </h1>
 
-            {/* Subheadline */}
-            <p
-              ref={subheadlineRef}
-              className="text-lg text-slate-muted max-w-xl mb-8"
-            >
-              At Recruit 28, we strive to earn the trust of both clients and candidates through reliability, transparency, and results.
-            </p>
+
 
             {/* CTAs */}
             <div ref={ctaRef} className="flex flex-wrap items-center gap-4">
