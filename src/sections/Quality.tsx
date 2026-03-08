@@ -8,8 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 const values = [
   {
     icon: Star,
-    title: 'Curated Shortlists',
-    description: '3-5 candidates max, all pre-qualified and ready to interview.',
+    title: 'Selected Shortlists',
+    description: 'A focused selection of pre-qualified candidates, all ready to interview.',
   },
   {
     icon: Users,
@@ -95,7 +95,7 @@ export default function Quality() {
             Quality over volume.
           </h2>
           <p className="animate-item text-lg text-slate-muted max-w-2xl mx-auto">
-            Shortlists you can act on. Candidates who stay. That's the Recruit 28 difference.
+            We don't just fill roles. We find the ones who stay.
           </p>
         </div>
 

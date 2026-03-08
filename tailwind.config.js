@@ -63,7 +63,7 @@ module.exports = {
         mono: ['IBM Plex Mono', 'monospace'],
       },
       fontSize: {
-        'hero': ['clamp(44px, 5vw, 78px)', { lineHeight: '0.95', letterSpacing: '-0.02em' }],
+        'hero': ['clamp(32px, 4.2vw, 54px)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
         'h2': ['clamp(34px, 3.6vw, 56px)', { lineHeight: '1.0', letterSpacing: '-0.01em' }],
         'h3': ['clamp(24px, 2.4vw, 36px)', { lineHeight: '1.1', letterSpacing: '-0.01em' }],
         'body': ['clamp(15px, 1.1vw, 18px)', { lineHeight: '1.65' }],

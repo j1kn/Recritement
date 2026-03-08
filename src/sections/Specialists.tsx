@@ -83,8 +83,11 @@ export default function Specialists() {
       {/* Content */}
       <div className="relative w-full px-6 lg:px-[6vw]">
         <div ref={contentRef} className="text-center mb-12 lg:mb-16">
-          <h2 className="animate-item font-display font-bold text-h2 text-slate-text mb-4">
+          <span className="animate-item text-micro text-coral block mb-4">
             Our Expertise
+          </span>
+          <h2 className="animate-item font-display font-bold text-h2 text-slate-text mb-4">
+            We're sales recruitment specialists.
           </h2>
           <p className="animate-item text-lg text-slate-muted max-w-2xl mx-auto">
             Just focused delivery from a team that understands sales.
