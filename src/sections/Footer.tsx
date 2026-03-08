@@ -1,7 +1,7 @@
-import { Mail, MapPin, Linkedin, Twitter, Phone } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Phone } from 'lucide-react';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -26,22 +26,17 @@ export default function Footer() {
               Recruit<span className="text-coral">28</span>
             </a>
             <p className="text-sm text-slate-muted mb-6">
-              Sales and customer recruitment—done right. We place the people who move the needle.
+              The people who perform. We find them.
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/taljit-kang-b5888886/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-slate-muted hover:text-coral hover:bg-white/10 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={16} />
-              </a>
-              <a
-                href="#"
-                className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-slate-muted hover:text-coral hover:bg-white/10 transition-all duration-300"
-                aria-label="Twitter"
-              >
-                <Twitter size={16} />
               </a>
             </div>
           </div>
@@ -94,18 +89,18 @@ export default function Footer() {
             </h4>
             <div className="space-y-3">
               <a
-                href="tel:+442071234567"
+                href="tel:07821905473"
                 className="flex items-center gap-2 text-sm text-slate-muted hover:text-slate-text transition-colors duration-300"
               >
                 <Phone size={14} className="text-coral" />
-                +44 (0) 20 7123 4567
+                07821 905473
               </a>
               <a
-                href="mailto:hello@recruit28.co.uk"
+                href="mailto:support@recruit28.co.uk"
                 className="flex items-center gap-2 text-sm text-slate-muted hover:text-slate-text transition-colors duration-300"
               >
                 <Mail size={14} className="text-coral" />
-                hello@recruit28.co.uk
+                support@recruit28.co.uk
               </a>
               <div className="flex items-center gap-2 text-sm text-slate-muted">
                 <MapPin size={14} className="text-coral" />
@@ -117,8 +112,8 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-muted">
-            © {currentYear} Recruit 28 Ltd. All rights reserved.
+          <p className="text-xs text-slate-muted max-w-2xl">
+            © 2026 Recruit 28 Ltd. All rights reserved. Recruit 28 is a trading name of Recruit 28 Ltd, registered in England and Wales (Company No. 17026940). Registered office: London.
           </p>
           <div className="flex items-center gap-6">
             <a

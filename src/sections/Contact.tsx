@@ -7,8 +7,8 @@ import { toast } from 'sonner';
 gsap.registerPlugin(ScrollTrigger);
 
 const contactInfo = [
-  { icon: Phone, label: 'Phone', value: '+44 (0) 20 7123 4567' },
-  { icon: Mail, label: 'Email', value: 'hello@recruit28.co.uk' },
+  { icon: Phone, label: 'Phone', value: '07821 905473' },
+  { icon: Mail, label: 'Email', value: 'support@recruit28.co.uk' },
   { icon: MapPin, label: 'Location', value: 'UK' },
 ];
 
@@ -109,10 +109,10 @@ export default function Contact() {
         <div className="text-center mb-12 lg:mb-16">
           <span className="text-micro text-coral block mb-3">Get In Touch</span>
           <h2 className="font-display font-bold text-h2 text-slate-text mb-4">
-            Ready to hire better?
+            Your next hire starts here!
           </h2>
           <p className="text-body text-slate-muted max-w-2xl mx-auto">
-            Let's discuss your needs. We'll get back to you within 24 hours.
+            Tell us what you're looking for. We'll be in touch shortly.
           </p>
         </div>
 
