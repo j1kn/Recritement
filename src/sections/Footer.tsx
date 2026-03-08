@@ -1,7 +1,11 @@
 import { Mail, MapPin, Linkedin, Phone } from 'lucide-react';
+import { useState } from 'react';
+import { LegalDialog } from '../components/LegalDialog';
+
+type LegalType = 'cookie' | 'terms' | 'privacy' | null;
 
 export default function Footer() {
-
+  const [activeLegal, setActiveLegal] = useState<LegalType>(null);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -116,27 +120,33 @@ export default function Footer() {
             © 2026 Recruit 28 Ltd. All rights reserved. Recruit 28 is a trading name of Recruit 28 Ltd, registered in England and Wales (Company No. 17026940). Registered office: London.
           </p>
           <div className="flex items-center gap-6">
-            <a
-              href="#"
+            <button
+              onClick={() => setActiveLegal('privacy')}
               className="text-xs text-slate-muted hover:text-slate-text transition-colors duration-300"
             >
               Privacy Policy
-            </a>
-            <a
-              href="#"
+            </button>
+            <button
+              onClick={() => setActiveLegal('terms')}
               className="text-xs text-slate-muted hover:text-slate-text transition-colors duration-300"
             >
               Terms of Service
-            </a>
-            <a
-              href="#"
+            </button>
+            <button
+              onClick={() => setActiveLegal('cookie')}
               className="text-xs text-slate-muted hover:text-slate-text transition-colors duration-300"
             >
               Cookie Policy
-            </a>
+            </button>
           </div>
         </div>
       </div>
+
+      <LegalDialog
+        type={activeLegal}
+        isOpen={activeLegal !== null}
+        onClose={() => setActiveLegal(null)}
+      />
     </footer>
   );
 }

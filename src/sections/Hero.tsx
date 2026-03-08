@@ -65,17 +65,7 @@ export default function Hero() {
         },
       });
 
-      gsap.to(portraitRef.current, {
-        opacity: 0,
-        y: -20,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 0.5,
-        },
-      });
+      // Image now scrolls naturally without fading out
     }, section);
 
     return () => ctx.revert();
