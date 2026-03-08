@@ -1,16 +1,13 @@
 import { Mail, MapPin, Linkedin, Phone } from 'lucide-react';
-import { useState } from 'react';
-import { LegalDialog } from '../components/LegalDialog';
-
-type LegalType = 'cookie' | 'terms' | 'privacy' | null;
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
-  const [activeLegal, setActiveLegal] = useState<LegalType>(null);
-
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = '/' + href;
     }
   };
 
@@ -23,12 +20,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="font-display font-bold text-2xl text-slate-text tracking-tight inline-block mb-4"
             >
               Recruit<span className="text-coral">28</span>
-            </a>
+            </Link>
             <p className="text-sm text-slate-muted mb-6">
               The people who perform. We find them.
             </p>
@@ -120,33 +117,27 @@ export default function Footer() {
             © 2026 Recruit 28 Ltd. All rights reserved. Recruit 28 is a trading name of Recruit 28 Ltd, registered in England and Wales (Company No. 17026940). Registered office: London.
           </p>
           <div className="flex items-center gap-6">
-            <button
-              onClick={() => setActiveLegal('privacy')}
+            <Link
+              to="/privacy-policy"
               className="text-xs text-slate-muted hover:text-slate-text transition-colors duration-300"
             >
               Privacy Policy
-            </button>
-            <button
-              onClick={() => setActiveLegal('terms')}
+            </Link>
+            <Link
+              to="/terms-of-use"
               className="text-xs text-slate-muted hover:text-slate-text transition-colors duration-300"
             >
-              Terms of Service
-            </button>
-            <button
-              onClick={() => setActiveLegal('cookie')}
+              Terms of Use
+            </Link>
+            <Link
+              to="/cookie-policy"
               className="text-xs text-slate-muted hover:text-slate-text transition-colors duration-300"
             >
               Cookie Policy
-            </button>
+            </Link>
           </div>
         </div>
       </div>
-
-      <LegalDialog
-        type={activeLegal}
-        isOpen={activeLegal !== null}
-        onClose={() => setActiveLegal(null)}
-      />
     </footer>
   );
 }

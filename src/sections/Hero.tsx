@@ -11,7 +11,6 @@ export default function Hero() {
   const portraitRef = useRef<HTMLDivElement>(null);
   const microLabelRef = useRef<HTMLSpanElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
-
   const ctaRef = useRef<HTMLDivElement>(null);
 
   // Auto-play entrance animation on load
@@ -38,21 +37,32 @@ export default function Hero() {
         )
         .fromTo(
           portraitRef.current,
-          { opacity: 0, x: 30 },
-          { opacity: 1, x: 0, duration: 0.7 },
+          { opacity: 0, x: 30, scale: 0.9 },
+          { opacity: 1, x: 0, scale: 1, duration: 0.8 },
           '-=0.5'
         );
+
+      // Subtle slow floating animation for the portrait
+      gsap.to(portraitRef.current, {
+        y: -15,
+        duration: 3,
+        repeat: -1,
+        yoyo: true,
+        ease: 'power1.inOut',
+        delay: 0.8
+      });
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
 
-  // Simple fade on scroll
+  // Parallax and fade effects on scroll
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
 
     const ctx = gsap.context(() => {
+      // Content fade and lift
       gsap.to(contentRef.current, {
         opacity: 0,
         y: -30,
@@ -65,7 +75,18 @@ export default function Hero() {
         },
       });
 
-      // Image now scrolls naturally without fading out
+      // Subtle parallax and scale-up on scroll for portrait
+      gsap.to(portraitRef.current, {
+        y: 40,
+        scale: 1.05,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+        },
+      });
     }, section);
 
     return () => ctx.revert();
@@ -83,7 +104,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen bg-navy flex items-center"
+      className="relative min-h-screen bg-navy flex items-center overflow-hidden"
       style={{ zIndex: 10 }}
     >
       {/* Background Image */}
@@ -121,8 +142,6 @@ export default function Hero() {
               ))}
             </h1>
 
-
-
             {/* CTAs */}
             <div ref={ctaRef} className="flex flex-wrap items-center gap-4">
               <button
@@ -156,7 +175,7 @@ export default function Hero() {
           {/* Portrait Card */}
           <div
             ref={portraitRef}
-            className="hidden lg:block lg:w-[32vw] lg:h-[55vh] rounded-card overflow-hidden shadow-card"
+            className="hidden lg:block lg:w-[32vw] lg:h-[55vh] rounded-card overflow-hidden shadow-card relative"
           >
             <img
               src="/images/hero_professional_portrait.jpg"
