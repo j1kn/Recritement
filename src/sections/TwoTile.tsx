@@ -139,7 +139,7 @@ export default function TwoTile() {
                 For Employers
               </h3>
               <p className="animate-item text-slate-muted mb-6 max-w-md">
-                We deliver sales and customer professionals who are screened for
+                We deliver the sales and customer success professionals who are screened for
                 impact—so you hit target faster. Quality candidates, not volume.
               </p>
               <button

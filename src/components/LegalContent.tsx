@@ -145,8 +145,8 @@ export const CookiePolicy = () => (
             <h2 className="text-xl font-bold mb-3 text-coral">7. Contact Us</h2>
             <p className="text-slate-muted font-display text-sm">
                 If you have any questions about our use of cookies, please contact us:
-                <br />Email: <span className="text-coral">support@recruit28.co.uk</span>
-                <br />Address: London
+                <br />Email: <span className="text-coral">support@recruit28.com</span>
+                <br />Address: 20 Wenlock Road, London, England, N1 7GU
             </p>
         </section>
     </div>
@@ -165,7 +165,7 @@ export const TermsOfUse = () => (
                 These Terms of Use govern your access to and use of the Recruit 28 website. By using our website, you agree to these terms in full. If you do not agree, please stop using the site.
             </p>
             <p className="text-slate-muted mt-3">
-                Recruit 28 Ltd Company number 17026940 is a recruitment agency registered in England and Wales. Registered address: London. Email: <span className="text-coral">support@recruit28.co.uk</span>
+                Recruit 28 Ltd Company number 17026940 is a recruitment agency registered in England and Wales. Registered address: 20 Wenlock Road, London, England, N1 7GU. Email: <span className="text-coral">support@recruit28.com</span>
             </p>
         </section>
 
@@ -252,8 +252,8 @@ export const TermsOfUse = () => (
             <h2 className="text-xl font-bold mb-3 text-coral">11. Contact Us</h2>
             <p className="text-slate-muted font-display text-sm">
                 If you have any questions about these Terms of Use, please contact us at:
-                <br />Email: <span className="text-coral">support@recruit28.co.uk</span>
-                <br />Address: London
+                <br />Email: <span className="text-coral">support@recruit28.com</span>
+                <br />Address: 20 Wenlock Road, London, England, N1 7GU
             </p>
         </section>
     </div>
@@ -276,7 +276,7 @@ export const PrivacyPolicy = () => (
                 <br /><br />
                 Contact:
                 <br />Email: <span className="text-coral">support@recruit28.com</span>
-                <br />Address: London
+                <br />Address: 20 Wenlock Road, London, England, N1 7GU
             </p>
         </section>
 
@@ -400,7 +400,7 @@ export const PrivacyPolicy = () => (
                 <li>Right to withdraw consent – Where processing is based on consent, you may withdraw it at any time</li>
             </ul>
             <p className="text-slate-muted mt-4">
-                To exercise any of these rights, please contact us at <span className="text-coral">support@recruit28.co.uk</span>. We will respond within one month of receiving your request.
+                To exercise any of these rights, please contact us at <span className="text-coral">support@recruit28.com</span>. We will respond within one month of receiving your request.
             </p>
         </section>
 

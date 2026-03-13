@@ -8,8 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const contactInfo = [
   { icon: Phone, label: 'Phone', value: '07821 905473' },
-  { icon: Mail, label: 'Email', value: 'support@recruit28.co.uk' },
-  { icon: MapPin, label: 'Location', value: 'UK' },
+  { icon: Mail, label: 'Email', value: 'support@recruit28.com' },
+  { icon: MapPin, label: 'Location', value: '20 Wenlock Road, London, England, N1 7GU' },
 ];
 
 export default function Contact() {

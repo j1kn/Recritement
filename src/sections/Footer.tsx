@@ -97,15 +97,15 @@ export default function Footer() {
                 07821 905473
               </a>
               <a
-                href="mailto:support@recruit28.co.uk"
+                href="mailto:support@recruit28.com"
                 className="flex items-center gap-2 text-sm text-slate-muted hover:text-slate-text transition-colors duration-300"
               >
                 <Mail size={14} className="text-coral" />
-                support@recruit28.co.uk
+                support@recruit28.com
               </a>
               <div className="flex items-center gap-2 text-sm text-slate-muted">
                 <MapPin size={14} className="text-coral" />
-                UK
+                20 Wenlock Road, London, England, N1 7GU
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-muted max-w-2xl">
-            © 2026 Recruit 28 Ltd. All rights reserved. Recruit 28 is a trading name of Recruit 28 Ltd, registered in England and Wales (Company No. 17026940). Registered office: London.
+            © 2026 Recruit 28 Ltd. All rights reserved. Recruit 28 is a trading name of Recruit 28 Ltd, registered in England and Wales (Company No. 17026940). Registered office: 20 Wenlock Road, London, England, N1 7GU.
           </p>
           <div className="flex items-center gap-6">
             <Link
